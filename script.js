@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let typing = true;
     let displayingInitialMessages = true;
 
+    document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, { passive: false });
+
     function typeMessage() {
         const messages = displayingInitialMessages ? initialMessages : finalMessages;
 
